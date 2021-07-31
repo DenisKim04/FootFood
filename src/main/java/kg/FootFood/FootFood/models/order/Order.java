@@ -16,6 +16,8 @@ import java.util.Date;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private boolean status;
     @Column(name = "date_order")

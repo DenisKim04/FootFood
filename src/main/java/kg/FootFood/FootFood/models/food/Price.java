@@ -4,9 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 @Entity
@@ -15,6 +13,8 @@ import java.util.Date;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Price {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private  long id;
     private BigDecimal money;
     @Column(name = "start_date")
